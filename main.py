@@ -12,7 +12,7 @@ def read_main():
 
 
 
-with open("chaiblit_config.py") as f:
+with open("chainlit_config.py") as f:
         content = f.read()
         
 with open("/var/task/_vendor/chainlit/config.py", "w") as f:
