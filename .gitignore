@@ -1,0 +1,13 @@
+__pycache__/
+*.py[codz]
+*$py.class
+
+.files
+.chainlit
+
+__pycache__
+
+# Environments
+.env
+.envrc
+.venv
