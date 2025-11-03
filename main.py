@@ -1,9 +1,3 @@
-with open("chainlit_config.py") as f:
-        content = f.read()
-        
-with open("/var/task/_vendor/chainlit/config.py", "w") as f:
-    f.write(content)
-
 from fastapi import FastAPI
 from chainlit.utils import mount_chainlit
     
