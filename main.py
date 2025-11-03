@@ -1,7 +1,17 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from chainlit.utils import mount_chainlit
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    with open("chaiblit_config.py") as f:
+        content = f.read()
+        
+    with open("/var/task/_vendor/chainlit/config.py", "w") as f:
+        f.write(content)
+
+app = FastAPI(lifespan=lifespan)
 
 
 @app.get("/app")
