@@ -4,6 +4,8 @@ __pycache__/
 
 __pycache__
 
+chatbot_logs.txt
+
 # Environments
 .env
 .envrc
